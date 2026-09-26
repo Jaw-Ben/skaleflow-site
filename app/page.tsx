@@ -58,7 +58,7 @@ function Hero() {
         variants={item}
         className="mt-6 text-lg text-text-muted max-w-xl"
       >
-        Production UGC, media buying Meta & TikTok, réseau de créateurs — tout sous un même toit pour accélérer votre acquisition.
+        Production UGC & media buying Meta/TikTok — <br/> tout sous un même toit pour accélérer votre acquisition.
       </motion.p>
 
       <motion.div 
@@ -122,21 +122,34 @@ function About() {
   );
 }
 
-const services = [
+const offers = [
   {
+    tier: "Offre Classique",
     title: "Production UGC",
+    price: "À partir de 800€/mois",
     description:
-      "Des publicités natives, pensées pour convertir sur Meta et TikTok — scriptées, tournées et montées par notre réseau de créateurs.",
+      "Des vidéos publicitaires générées par IA, pensées pour convertir sur Meta et TikTok — livrées en volume, prêtes à diffuser.",
+    features: [
+      "10 à 30 vidéos par mois",
+      "Production 100% IA",
+      "Créateurs de contenu humains sur demande si le besoin l'exige",
+      "Formats optimisés Meta & TikTok",
+    ],
+    highlighted: false,
   },
   {
-    title: "Media Buying",
+    tier: "Offre Premium",
+    title: "Partenariat de Croissance",
+    price: "Sur devis",
     description:
-      "Pilotage et optimisation de vos campagnes Meta & TikTok Ads, avec une logique de test créatif constant pour baisser le CAC.",
-  },
-  {
-    title: "Réseau de créateurs",
-    description:
-      "Accès à une communauté de créateurs sélectionnés pour votre niche, pour produire du contenu authentique à l'échelle.",
+      "L'offre complète : production, diffusion et stratégie. On ne se contente pas de créer du contenu, on pilote votre croissance de bout en bout.",
+    features: [
+      "Production UGC incluse",
+      "Media buying & diffusion Meta/TikTok",
+      "Stratégie d'acquisition sur-mesure",
+      "Reporting et optimisation continue",
+    ],
+    highlighted: true,
   },
 ];
 
@@ -148,26 +161,61 @@ function Services() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
-      className="max-w-6xl mx-auto px-6 py-32"
+      className="max-w-5xl mx-auto px-6 py-32"
     >
       <motion.div variants={item} className="text-center mb-16">
         <span className="text-sm uppercase tracking-widest text-primary-light">
-          Ce qu'on fait
+          Nos offres
         </span>
-        <h2 className="text-3xl md:text-4xl font-bold mt-3">Nos services</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mt-3">Choisissez votre niveau de croissance</h2>
       </motion.div>
 
-      <div className="grid md:grid-cols-3 gap-8">
-        {services.map((service) => (
+      <div className="grid md:grid-cols-2 gap-8 items-stretch">
+        {offers.map((offer) => (
           <motion.div
-            key={service.title}
+            key={offer.tier}
             variants={item}
-            className="bg-surface border border-white/5 rounded-2xl p-8 hover:border-white/10 transition-colors"
+            className={`rounded-2xl p-8 flex flex-col ${
+              offer.highlighted
+                ? "bg-surface border-2 border-primary relative"
+                : "bg-surface border border-white/5"
+            }`}
           >
-            <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-            <p className="text-text-muted leading-relaxed">
-              {service.description}
+            {offer.highlighted && (
+              <span className="absolute -top-3 left-8 bg-primary text-white text-xs font-semibold uppercase tracking-wide px-3 py-1 rounded-full">
+                Recommandé
+              </span>
+            )}
+
+            <span className="text-sm uppercase tracking-widest text-primary-light mb-2">
+              {offer.tier}
+            </span>
+            <h3 className="text-2xl font-bold mb-1">{offer.title}</h3>
+            <span className="text-text-muted text-sm mb-6">{offer.price}</span>
+
+            <p className="text-text-muted leading-relaxed mb-6">
+              {offer.description}
             </p>
+
+            <ul className="space-y-3 mb-8 flex-1">
+              {offer.features.map((feature) => (
+                <li key={feature} className="flex items-start gap-3 text-sm">
+                  <span className="text-primary-light mt-0.5">✓</span>
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href="#contact"
+              className={`text-center font-medium px-6 py-3 rounded-full transition-colors ${
+                offer.highlighted
+                  ? "bg-primary hover:bg-primary-light text-white"
+                  : "border border-white/10 hover:border-white/30 text-text"
+              }`}
+            >
+              {offer.highlighted ? "Devenir partenaire" : "Réserver un appel"}
+            </a>
           </motion.div>
         ))}
       </div>
