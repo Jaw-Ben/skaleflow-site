@@ -8,7 +8,7 @@ import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "SkaleFlow — Growth Partner Agency for DTC Brands",
-  description: "Production UGC, media buying Meta & TikTok.",
+  description: "Production UGC & Media Buying Meta & TikTok.",
 };
 
 export default async function RootLayout({
