@@ -1,0 +1,94 @@
+{
+  "hero": {
+    "badge": "Growth Partner Agency",
+    "titleBefore": "We scale your DTC brand with",
+    "titleHighlight": "content that converts",
+    "description": "UGC production & media buying for Meta/TikTok — everything under one roof to accelerate your acquisition.",
+    "ctaPrimary": "Book a call",
+    "ctaSecondary": "See our services"
+  },
+  "about": {
+    "badge": "Who we are",
+    "title": "A team that helps brands sell more, online",
+    "introBefore": "SkaleFlow works with brands that sell their products",
+    "introHighlight": "directly online",
+    "paragraph1": "Our mission: create ad videos people actually want to act on, then put them in front of the right audience, at the right time, at the right price, on Instagram and TikTok. Our goal is sales, not just views.",
+    "paragraph2": "Our edge is authenticity: we produce content tailored to the audience, built to feel like something a real creator would post — so it earns attention instead of fighting for it."
+  },
+  "services": {
+    "badge": "Our offers",
+    "title": "Choose your growth tier",
+    "recommendedBadge": "Recommended",
+    "offers": [
+      {
+        "tier": "Starter Plan",
+        "title": "UGC Production",
+        "price": "From $800/month",
+        "description": "AI-generated ad videos built to convert on Meta and TikTok — delivered at volume, ready to run.",
+        "features": [
+          "10 to 30 videos per month",
+          "100% AI production",
+          "Human creators on request when a brand needs it",
+          "Formats optimized for Meta & TikTok"
+        ],
+        "cta": "Book a call"
+      },
+      {
+        "tier": "Premium Plan",
+        "title": "Growth Partnership",
+        "price": "Custom pricing",
+        "description": "The full package: production, media buying, and strategy. We don't just make content — we drive your growth end to end.",
+        "features": [
+          "UGC production included",
+          "Media buying & distribution on Meta/TikTok",
+          "Tailored acquisition strategy",
+          "Ongoing reporting and optimization"
+        ],
+        "cta": "Become a partner"
+      }
+    ]
+  },
+  "methode": {
+    "badge": "How we work",
+    "title": "Our process",
+    "prevLabel": "Previous step",
+    "nextLabel": "Next step",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Audit & Strategy",
+        "description": "We analyze your brand, your current situation, and your goals to build a tailored acquisition plan."
+      },
+      {
+        "number": "02",
+        "title": "Production",
+        "description": "We deliver the first batches of UGC content, pre-tested on high-potential formats."
+      },
+      {
+        "number": "03",
+        "title": "Distribution",
+        "description": "We launch Meta & TikTok campaigns with a rigorous testing structure to quickly spot the winning creatives."
+      },
+      {
+        "number": "04",
+        "title": "Ongoing optimization",
+        "description": "We iterate weekly on budgets, audiences, and ads — production never stops, and neither does performance."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to scale your brand?",
+    "description": "Book a 20-minute call so we can pinpoint your biggest acquisition lever together.",
+    "button": "Book a call"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "email": "contact@skaleflow.net"
+  },
+    "nav": {
+        "services": "Services",
+        "methode": "Process",
+        "contact": "Contact",
+        "cta": "Book a call"
+    }
+}

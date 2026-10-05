@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimateEffect, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const container = {
   hidden: { opacity: 0 },
@@ -32,6 +33,8 @@ export default function Home() {
 }
 
 function Hero() {
+  const t = useTranslations("hero");
+
   return (
     <motion.section
       variants={container}
@@ -43,39 +46,36 @@ function Hero() {
         variants={item}
         className="text-sm uppercase tracking-widest text-primary-light mb-4"
       >
-        Growth Partner Agency
+        {t("badge")}
       </motion.span>
 
       <motion.h1
         variants={item}
         className="text-4xl md:text-6xl font-bold max-w-3xl leading-tight"
       >
-        On scale votre marque DTC avec du{" "}
-        <span className="text-primary-light">contenu qui convertit</span>
+        {t("titleBefore")}{" "}
+        <span className="text-primary-light">{t("titleHighlight")}</span>
       </motion.h1>
 
       <motion.p
         variants={item}
         className="mt-6 text-lg text-text-muted max-w-xl"
       >
-        Production UGC & media buying Meta/TikTok — <br/> tout sous un même toit pour accélérer votre acquisition.
+        {t("description")}
       </motion.p>
 
-      <motion.div 
-      variants={item} 
-      className="mt-10 flex flex-col sm:flex-row gap-4"
-      >
+      <motion.div variants={item} className="mt-10 flex flex-col sm:flex-row gap-4">
         <a
           href="#contact"
           className="bg-primary hover:bg-primary-light text-text-inverted font-medium px-6 py-3 rounded-full transition-colors"
         >
-          Réserver un appel
+          {t("ctaPrimary")}
         </a>
         <a
           href="#services"
           className="border border-white/10 hover:border-white/30 text-text font-medium px-6 py-3 rounded-full transition-colors"
         >
-          Voir nos services
+          {t("ctaSecondary")}
         </a>
       </motion.div>
     </motion.section>
@@ -83,6 +83,8 @@ function Hero() {
 }
 
 function About() {
+  const t = useTranslations("about");
+
   return (
     <motion.section
       id="about"
@@ -94,66 +96,38 @@ function About() {
     >
       <motion.div variants={item} className="text-center mb-12">
         <span className="text-sm uppercase tracking-widest text-primary-light">
-          Qui sommes-nous
+          {t("badge")}
         </span>
-        <h2 className="text-3xl md:text-4xl font-bold mt-3">
-          Une équipe qui aide les marques à vendre plus, en ligne
-        </h2>
+        <h2 className="text-3xl md:text-4xl font-bold mt-3">{t("title")}</h2>
       </motion.div>
 
       <motion.div variants={item} className="space-y-6 text-lg text-text-muted leading-relaxed text-center mb-12">
         <p className="text-xl md:text-2xl font-semibold text-text">
-          SkaleFlow travaille avec des marques qui vendent leurs produits{" "}
-          <span className="text-primary-light">directement sur internet</span>.
+          {t("introBefore")}{" "}
+          <span className="text-primary-light">{t("introHighlight")}</span>.
         </p>
 
-        <p>
-          Notre mission : créer des vidéos publicitaires qui donnent envie d'acheter, puis les diffuser
-          au bon moment, aux bonnes personnes et au bon prix sur Instagram et TikTok.<br/>
-          Notre objectif est de générer des ventes, pas seulement des vues.
-        </p>
+        <p>{t("paragraph1")}</p>
 
-        <p>
-          Notre différence tient à l'authenticité : on tourne des contenus adaptés au public, qui ressemblent à 
-          ce que pourrait poster un créateur de contenu pour capter l'attention sans la forcer.
-        </p>
+        <p>{t("paragraph2")}</p>
       </motion.div>
     </motion.section>
   );
 }
 
-const offers = [
-  {
-    tier: "Offre Classique",
-    title: "Production UGC",
-    price: "À partir de 800€/mois",
-    description:
-      "Des vidéos publicitaires générées par IA, pensées pour convertir sur Meta et TikTok — livrées en volume, prêtes à diffuser.",
-    features: [
-      "10 à 30 vidéos par mois",
-      "Production 100% IA",
-      "Créateurs de contenu humains sur demande si le besoin l'exige",
-      "Formats optimisés Meta & TikTok",
-    ],
-    highlighted: false,
-  },
-  {
-    tier: "Offre Premium",
-    title: "Partenariat de Croissance",
-    price: "Sur devis",
-    description:
-      "L'offre complète : production, diffusion et stratégie. On ne se contente pas de créer du contenu, on pilote votre croissance de bout en bout.",
-    features: [
-      "Production UGC incluse",
-      "Media buying & diffusion Meta/TikTok",
-      "Stratégie d'acquisition sur-mesure",
-      "Reporting et optimisation continue",
-    ],
-    highlighted: true,
-  },
-];
+type Offer = {
+  tier: string;
+  title: string;
+  price: string;
+  description: string;
+  features: string[];
+  cta: string;
+};
 
 function Services() {
+  const t = useTranslations("services");
+  const offers = t.raw("offers") as Offer[];
+
   return (
     <motion.section
       id="services"
@@ -165,97 +139,81 @@ function Services() {
     >
       <motion.div variants={item} className="text-center mb-16">
         <span className="text-sm uppercase tracking-widest text-primary-light">
-          Nos offres
+          {t("badge")}
         </span>
-        <h2 className="text-3xl md:text-4xl font-bold mt-3">Choisissez votre niveau de croissance</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mt-3">{t("title")}</h2>
       </motion.div>
 
       <div className="grid md:grid-cols-2 gap-8 items-stretch">
-        {offers.map((offer) => (
-          <motion.div
-            key={offer.tier}
-            variants={item}
-            className={`rounded-2xl p-8 flex flex-col ${
-              offer.highlighted
-                ? "bg-surface border-2 border-primary relative"
-                : "bg-surface border border-white/5"
-            }`}
-          >
-            {offer.highlighted && (
-              <span className="absolute -top-3 left-8 bg-primary text-white text-xs font-semibold uppercase tracking-wide px-3 py-1 rounded-full">
-                Recommandé
-              </span>
-            )}
+        {offers.map((offer, i) => {
+          const highlighted = i === 1;
 
-            <span className="text-sm uppercase tracking-widest text-primary-light mb-2">
-              {offer.tier}
-            </span>
-            <h3 className="text-2xl font-bold mb-1">{offer.title}</h3>
-            <span className="text-text-muted text-sm mb-6">{offer.price}</span>
-
-            <p className="text-text-muted leading-relaxed mb-6">
-              {offer.description}
-            </p>
-
-            <ul className="space-y-3 mb-8 flex-1">
-              {offer.features.map((feature) => (
-                <li key={feature} className="flex items-start gap-3 text-sm">
-                  <span className="text-primary-light mt-0.5">✓</span>
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
-
-            <a
-              href="#contact"
-              className={`text-center font-medium px-6 py-3 rounded-full transition-colors ${
-                offer.highlighted
-                  ? "bg-primary hover:bg-primary-light text-white"
-                  : "border border-white/10 hover:border-white/30 text-text"
+          return (
+            <motion.div
+              key={offer.tier}
+              variants={item}
+              className={`rounded-2xl p-8 flex flex-col ${
+                highlighted
+                  ? "bg-surface border-2 border-primary relative"
+                  : "bg-surface border border-white/5"
               }`}
             >
-              {offer.highlighted ? "Devenir partenaire" : "Réserver un appel"}
-            </a>
-          </motion.div>
-        ))}
+              {highlighted && (
+                <span className="absolute -top-3 left-8 bg-primary text-white text-xs font-semibold uppercase tracking-wide px-3 py-1 rounded-full">
+                  {t("recommendedBadge")}
+                </span>
+              )}
+
+              <span className="text-sm uppercase tracking-widest text-primary-light mb-2">
+                {offer.tier}
+              </span>
+              <h3 className="text-2xl font-bold mb-1">{offer.title}</h3>
+              <span className="text-text-muted text-sm mb-6">{offer.price}</span>
+
+              <p className="text-text-muted leading-relaxed mb-6">{offer.description}</p>
+
+              <ul className="space-y-3 mb-8 flex-1">
+                {offer.features.map((feature) => (
+                  <li key={feature} className="flex items-start gap-3 text-sm">
+                    <span className="text-primary-light mt-0.5">✓</span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href="#contact"
+                className={`text-center font-medium px-6 py-3 rounded-full transition-colors ${
+                  highlighted
+                    ? "bg-primary hover:bg-primary-light text-white"
+                    : "border border-white/10 hover:border-white/30 text-text"
+                }`}
+              >
+                {offer.cta}
+              </a>
+            </motion.div>
+          );
+        })}
       </div>
     </motion.section>
   );
 }
 
-const steps = [
-  {
-    number: "01",
-    title: "Audit & Stratégie",
-    description:
-      "Analyse de votre marque, de votre situation et de vos demandes pour construire un plan d'acquisition sur-mesure.",
-  },
-  {
-    number: "02",
-    title: "Production",
-    description:
-      "Livraisons des premiers lots de contenu UGC, testés en amont sur des formats à fort potentiel.",
-  },
-  {
-    number: "03",
-    title: "Diffusion",
-    description:
-      "Lancement des campagnes Meta & TikTok avec une structure de test rigoureuse pour identifier rapidement les créas gagnantes.",
-  },
-  {
-    number: "04",
-    title: "Optimisation continue",
-    description:
-      "Itération hebdomadaire sur les budgets, audiences et pubs — la production ne s'arrête jamais, la performance non plus.",
-  },
-];
+type Step = {
+  number: string;
+  title: string;
+  description: string;
+};
 
-const SLIDE_DURATION = 5000; // 5 secondes
+const SLIDE_DURATION = 5000;
 
 function Methode() {
+  const t = useTranslations("methode");
+  const steps = t.raw("steps") as Step[];
+
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
-  const [key, setKey] = useState(0); // force le reset de la barre de progression
+  const [key, setKey] = useState(0);
 
   const goTo = (newIndex: number, dir: number) => {
     setDirection(dir);
@@ -290,13 +248,12 @@ function Methode() {
     >
       <motion.div variants={item} className="text-center mb-16">
         <span className="text-sm uppercase tracking-widest text-primary-light">
-          Comment on travaille
+          {t("badge")}
         </span>
-        <h2 className="text-3xl md:text-4xl font-bold mt-3">Notre méthode</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mt-3">{t("title")}</h2>
       </motion.div>
 
       <motion.div variants={item} className="relative">
-        {/* Barres de progression */}
         <div className="flex gap-2 mb-10">
           {steps.map((s, i) => (
             <div key={s.number} className="flex-1 h-1 bg-white/10 rounded-full overflow-hidden">
@@ -314,11 +271,10 @@ function Methode() {
           ))}
         </div>
 
-        {/* Contenu du slide */}
         <div className="flex items-center gap-6">
           <button
             onClick={prev}
-            aria-label="Étape précédente"
+            aria-label={t("prevLabel")}
             className="cursor-pointer shrink-0 w-11 h-11 rounded-full border border-white/10 hover:border-white/30 flex items-center justify-center text-text-muted hover:text-text transition-colors"
           >
             ←
@@ -335,20 +291,16 @@ function Methode() {
                 exit="exit"
                 transition={{ duration: 0.35, ease: "easeOut" }}
               >
-                <span className="text-4xl font-bold text-primary-light">
-                  {step.number}
-                </span>
+                <span className="text-4xl font-bold text-primary-light">{step.number}</span>
                 <h3 className="text-2xl font-semibold mt-3 mb-3">{step.title}</h3>
-                <p className="text-text-muted leading-relaxed max-w-xl">
-                  {step.description}
-                </p>
+                <p className="text-text-muted leading-relaxed max-w-xl">{step.description}</p>
               </motion.div>
             </AnimatePresence>
           </div>
 
           <button
             onClick={next}
-            aria-label="Étape suivante"
+            aria-label={t("nextLabel")}
             className="cursor-pointer shrink-0 w-11 h-11 rounded-full border border-white/10 hover:border-white/30 flex items-center justify-center text-text-muted hover:text-text transition-colors"
           >
             →
@@ -360,6 +312,8 @@ function Methode() {
 }
 
 function CTA() {
+  const t = useTranslations("cta");
+
   return (
     <motion.section
       id="contact"
@@ -370,14 +324,11 @@ function CTA() {
       className="max-w-4xl mx-auto px-6 py-32 text-center"
     >
       <motion.h2 variants={item} className="text-3xl md:text-5xl font-bold mb-6">
-        Prêt à scaler votre marque ?
+        {t("title")}
       </motion.h2>
 
-      <motion.p
-        variants={item}
-        className="text-lg text-text-muted max-w-xl mx-auto mb-10"
-      >
-        Réservez un appel de 20 minutes pour qu'on identifie ensemble votre plus gros levier d'acquisition.
+      <motion.p variants={item} className="text-lg text-text-muted max-w-xl mx-auto mb-10">
+        {t("description")}
       </motion.p>
 
       <motion.div variants={item}>
@@ -387,7 +338,7 @@ function CTA() {
           rel="noopener noreferrer"
           className="inline-block bg-primary hover:bg-primary-light text-text-inverted font-medium px-8 py-4 rounded-full transition-colors text-lg"
         >
-          Réserver un appel
+          {t("button")}
         </a>
       </motion.div>
     </motion.section>
@@ -395,16 +346,18 @@ function CTA() {
 }
 
 function Footer() {
+  const t = useTranslations("footer");
+
   return (
     <footer className="border-t border-white/5 py-10 px-6">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
         <span className="text-sm text-text-muted">
-          © {new Date().getFullYear()} SkaleFlow. Tous droits réservés.
+          © {new Date().getFullYear()} SkaleFlow. {t("rights")}
         </span>
 
         <div className="flex gap-6 text-sm text-text-muted">
-          <a href="mailto:contact@skaleflow.co" className="hover:text-text transition-colors">
-            contact@skaleflow.co
+          <a href={`mailto:${t("email")}`} className="hover:text-text transition-colors">
+            {t("email")}
           </a>
           <a
             href="https://instagram.com/skaleflow.co"
