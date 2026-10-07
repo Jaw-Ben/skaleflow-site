@@ -83,12 +83,94 @@
   },
   "footer": {
     "rights": "All rights reserved.",
-    "email": "contact@skaleflow.net"
+    "email": "contact@skaleflow.net",
+    "privacyLink": "Privacy Policy",
+    "legalLink": "Legal Notice"
   },
     "nav": {
         "services": "Services",
         "methode": "Process",
         "contact": "Contact",
         "cta": "Book a call"
-    }
+    },
+      "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated",
+    "intro": "SkaleFlow takes the protection of your personal data seriously. This page explains what data we collect through skaleflow.co, why, and how you can exercise your rights.",
+    "sections": [
+      {
+        "heading": "1. Data controller",
+        "body": "The data controller for this site is Jawed Bensaih, trading as SkaleFlow, a French micro-entreprise registered under SIRET 10344668800014, with registered address 47 rue Vivienne 75002 Paris. Contact: contact@skaleflow.net."
+      },
+      {
+        "heading": "2. Data we collect",
+        "body": "We only collect data you provide to us directly: when booking a call (name, email address, and any information submitted through Calendly), and when completing our onboarding questionnaire (information about your business and needs, via Tally). This information is needed to handle your request; without it, we cannot schedule a call with you. We do not collect any other browsing data through non-essential cookies. We do not carry out any automated decision-making or profiling based on your data."
+      },
+      {
+        "heading": "3. Purpose of processing",
+        "body": "We use this data to: respond to your booking request, assess your needs ahead of an initial call, prepare and perform our contractual relationship if you become a client, and follow up with you regarding that relationship."
+      },
+      {
+        "heading": "4. Legal basis",
+        "body": "Processing is based on steps taken at your request prior to entering into a contract (booking a call, onboarding questionnaire), on the performance of a contract once you become a SkaleFlow client, and on our legitimate interest in following up on our business communications. Where we expressly ask for your consent, processing is based on that consent."
+      },
+      {
+        "heading": "5. Recipients and processors",
+        "body": "Your data is processed by SkaleFlow and shared only with the technical providers strictly necessary for our service: Calendly (call scheduling), Tally (onboarding questionnaire) and Vercel Inc. (website hosting). These providers act as data processors and are not permitted to use your data for any other purpose."
+      },
+      {
+        "heading": "6. International transfers",
+        "body": "Some of our providers (Calendly, Vercel Inc.) are located in the United States or may host data there. Where your data is transferred outside the UK or the European Economic Area, such transfers are protected by the EU-US Data Privacy Framework and the UK-US Data Bridge where the provider is certified, or otherwise by appropriate safeguards such as the Standard Contractual Clauses together with the UK Addendum. You can request a copy of these safeguards at contact@skaleflow.net."
+      },
+      {
+        "heading": "7. Data retention",
+        "body": "Your data is kept for as long as strictly necessary to manage our business relationship, then archived in line with applicable legal retention periods, before deletion or anonymisation. Prospects: 3 years from the last contact. Clients: duration of the contract + 5 years. Accounting records: 10 years."
+      },
+      {
+        "heading": "8. Cookies",
+        "body": "This site does not currently use any analytics or advertising cookies. Only cookies strictly necessary for the technical operation of the site may be set."
+      },
+      {
+        "heading": "9. Your rights",
+        "body": "Under the GDPR and, for individuals located in the UK, the UK GDPR and the Data Protection Act 2018, you have the right to access, rectify, erase, restrict, object to, and port your data. Where processing is based on your consent, you may withdraw it at any time, without affecting the lawfulness of processing carried out before withdrawal. To exercise these rights, contact us at contact@skaleflow.net: we will respond within one month. If you have a concern about how we handle your data, please contact us first so we can try to resolve it. You also have the right to lodge a complaint with the relevant supervisory authority (the CNIL in France, or the ICO in the UK)."
+      },
+      {
+        "heading": "10. Hosting",
+        "body": "This site is hosted by Vercel Inc., which may process technical connection data strictly as part of hosting the site."
+      }
+    ]
+  },
+    "legal": {
+    "title": "Legal Notice",
+    "sections": [
+      {
+        "heading": "1. Site publisher",
+        "body": "skaleflow.co is published by Jawed Bensaih, sole trader operating under the trading name SkaleFlow, registered under SIRET 10344668800014 (France). Address: 47 rue Vivienne 75002 Paris. Phone: 0666846135. Email: contact@skaleflow.net."
+      },
+      {
+        "heading": "2. Publication director",
+        "body": "The publication director is Jawed Bensaih, as the person responsible for SkaleFlow."
+      },
+      {
+        "heading": "3. Hosting",
+        "body": "This site is hosted by Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, United States."
+      },
+      {
+        "heading": "4. Intellectual property",
+        "body": "All content on this site (text, graphics, logo, structure) is the exclusive property of SkaleFlow, unless stated otherwise, and is protected by intellectual property law. Any reproduction, in whole or in part, without prior authorisation is prohibited."
+      },
+      {
+        "heading": "5. Limitation of liability",
+        "body": "SkaleFlow strives to ensure the accuracy of the information published on this site but cannot guarantee it is free of errors or omissions. SkaleFlow cannot be held liable for any direct or indirect damage resulting from access to or use of this site."
+      },
+      {
+        "heading": "6. Governing law",
+        "body": "This legal notice is governed by French law. Any dispute relating to the use of this site falls under the jurisdiction of the French courts."
+      },
+      {
+        "heading": "7. Contact",
+        "body": "For any question regarding this legal notice, you can reach us at contact@skaleflow.co."
+      }
+    ]
+  }
 }

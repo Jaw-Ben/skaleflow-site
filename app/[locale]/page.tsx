@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
 
 const container = {
   hidden: { opacity: 0 },
@@ -347,6 +348,7 @@ function CTA() {
 
 function Footer() {
   const t = useTranslations("footer");
+  const locale = useLocale();
 
   return (
     <footer className="border-t border-white/5 py-10 px-6">
@@ -356,6 +358,12 @@ function Footer() {
         </span>
 
         <div className="flex gap-6 text-sm text-text-muted">
+          <Link href={`/${locale}/privacy`} className="hover:text-text transition-colors">
+            {t("privacyLink")}
+          </Link>
+          <Link href={`/${locale}/legal`} className="hover:text-text transition-colors">
+            {t("legalLink")}
+          </Link>
           <a href={`mailto:${t("email")}`} className="hover:text-text transition-colors">
             {t("email")}
           </a>
