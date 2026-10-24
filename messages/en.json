@@ -137,7 +137,11 @@
       {
         "heading": "10. Hosting",
         "body": "This site is hosted by Vercel Inc., which may process technical connection data strictly as part of hosting the site."
-      }
+      },
+    {
+        "heading": "11. Additional information for US residents",
+        "body": "If you live in the United States, including California, you may have the following rights regarding your personal information:\n• The right to know what we collect and how we use it\n• The right to request deletion or correction\n• The right to opt out of the sale or sharing of your personal information\n• The right not to be discriminated against for exercising these rights\n\nWhat we collect: your name, business email, company name, state/country, and the details you give us when booking a call.\n\nWhy we collect it: to schedule and prepare our call, to contact you about our services, and to prepare a contract if we work together.\n\nWho we share it with: we do not sell your personal information, and we do not share it for cross-context behavioral advertising. We share it only with service providers who help us run our business (for example, scheduling, email and website hosting tools), under contract.\n\nWe keep prospect information for 3 years after our last interaction with you. If we work together, we keep your contract and billing records for as long as the law requires.\n\nHow to exercise your rights: email us at [contact@skaleflow.net]. We will respond within 45 days."
+    }
     ]
   },
     "legal": {
