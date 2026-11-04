@@ -4,7 +4,6 @@ import { getMessages } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "SkaleFlow — Growth Partner Agency for DTC Brands",
@@ -30,7 +29,6 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className="antialiased">
         <NextIntlClientProvider messages={messages}>
-          <Navbar />
           <main>{children}</main>
         </NextIntlClientProvider>
       </body>

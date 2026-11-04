@@ -1,4 +1,20 @@
 {
+  "start": {
+    "title": "Comment pouvons-nous vous aider ?",
+    "subtitle": "Choisissez le service qui vous intéresse.",
+    "ugc": {
+      "title": "Publicités UGC",
+      "description": "Production UGC & media buying Meta/TikTok pour scaler votre marque DTC.",
+      "cta": "Découvrir"
+    },
+    "dev": {
+      "title": "Développement Web",
+      "description": "Un site web professionnel, rapide et sur mesure pour développer votre activité.",
+      "cta": "Découvrir"
+    },
+    "comingSoon": "Bientôt disponible",
+    "back": "← Retour"
+  },
   "hero": {
     "badge": "Growth Partner Agency",
     "titleBefore": "On scale votre marque DTC avec du",

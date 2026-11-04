@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-bg/80 backdrop-blur-md border-b border-white/5">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-        <Link href={`/${locale}`} className="flex items-center">
+        <Link href={`/${locale}/ugc`} className="flex items-center">
           <Image
             src="/logo/skaleflow-logo-white.png"
             alt="SkaleFlow"

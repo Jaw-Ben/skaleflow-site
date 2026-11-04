@@ -1,4 +1,20 @@
 {
+  "start": {
+    "title": "How can we help you?",
+    "subtitle": "Choose the service you are interested in.",
+    "ugc": {
+      "title": "UGC Ads",
+      "description": "UGC production & Meta/TikTok media buying to scale your DTC brand.",
+      "cta": "Discover"
+    },
+    "dev": {
+      "title": "Web Development",
+      "description": "A professional, fast, tailor-made website to grow your business.",
+      "cta": "Discover"
+    },
+    "comingSoon": "Coming soon",
+    "back": "← Back"
+  },
   "hero": {
     "badge": "Growth Partner Agency",
     "titleBefore": "We scale your DTC brand with",
