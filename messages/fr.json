@@ -15,6 +15,91 @@
     "comingSoon": "Bientôt disponible",
     "back": "← Retour"
   },
+  "devpage": {
+    "hero": {
+      "badge": "Développement Web",
+      "titleBefore": "Un site web professionnel pour",
+      "titleHighlight": "attirer plus de clients",
+      "description": "Création de sites sur mesure pour les entreprises qui démarrent : clair, rapide et pensé pour être trouvé sur Google.",
+      "ctaPrimary": "Réserver un appel",
+      "ctaSecondary": "Voir nos offres"
+    },
+    "about": {
+      "badge": "Pourquoi nous",
+      "title": "Votre site, sans prise de tête",
+      "introBefore": "Un site qui inspire confiance et",
+      "introHighlight": "transforme les visiteurs en clients",
+      "paragraph1": "Quand on lance son activité, on n'a pas le temps de gérer un projet web. On s'occupe de tout : design, mise en ligne, nom de domaine et hébergement.",
+      "paragraph2": "Vous avez un interlocuteur unique, des tarifs transparents et un site que vous pouvez faire évoluer avec nous au fil de votre croissance."
+    },
+    "services": {
+      "badge": "Nos offres",
+      "title": "Deux offres, simples et claires",
+      "recommendedBadge": "Recommandé",
+      "offers": [
+        {
+          "tier": "Création",
+          "title": "Site vitrine",
+          "price": "Sur devis",
+          "description": "Un site professionnel sur mesure qui présente votre activité et facilite la prise de contact.",
+          "features": [
+            "Design sur mesure, adapté mobile",
+            "Pages essentielles : accueil, services, contact",
+            "Bouton d'appel et formulaire de contact",
+            "Nom de domaine et mise en ligne"
+          ],
+          "cta": "Demander un devis"
+        },
+        {
+          "tier": "Suivi",
+          "title": "Maintenance & SEO local",
+          "price": "Sur devis",
+          "description": "On garde votre site à jour et on travaille votre visibilité locale pour que vos clients vous trouvent.",
+          "features": [
+            "Mises à jour et sauvegardes régulières",
+            "Modifications et corrections de contenu",
+            "Optimisation de votre fiche Google",
+            "Référencement local (SEO)",
+            "Tarifs transparents, sans surprise"
+          ],
+          "cta": "Demander un devis"
+        }
+      ]
+    },
+    "methode": {
+      "badge": "Méthode",
+      "title": "De l'appel à la livraison",
+      "prevLabel": "Étape précédente",
+      "nextLabel": "Étape suivante",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Appel de découverte",
+          "description": "On échange par téléphone pour comprendre votre activité, vos clients et ce que vous attendez de votre site."
+        },
+        {
+          "number": "02",
+          "title": "Présentation en visio",
+          "description": "Sur Zoom, on vous présente la proposition de site et on ajuste ensemble les points importants."
+        },
+        {
+          "number": "03",
+          "title": "Validation et paiement",
+          "description": "Une fois la proposition validée, vous réglez en toute simplicité et on lance la création."
+        },
+        {
+          "number": "04",
+          "title": "Livraison et suivi",
+          "description": "On met votre site en ligne, on vous explique l'essentiel et on reste disponible pour la suite."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Prêt à lancer votre site ?",
+      "description": "Réservez un appel gratuit : on fait le point sur votre projet et on vous répond sans engagement.",
+      "button": "Réserver un appel"
+    }
+  },
   "hero": {
     "badge": "Growth Partner Agency",
     "titleBefore": "On scale votre marque DTC avec du",

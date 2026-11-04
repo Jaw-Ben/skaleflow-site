@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 
-export default function Navbar() {
+export default function Navbar({ home = "ugc" }: { home?: string }) {
   const [open, setOpen] = useState(false);
   const t = useTranslations("nav");
   const locale = useLocale();
@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-bg/80 backdrop-blur-md border-b border-white/5">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-        <Link href={`/${locale}/ugc`} className="flex items-center">
+        <Link href={`/${locale}/{home}`} className="flex items-center">
           <Image
             src="/logo/skaleflow-logo-white.png"
             alt="SkaleFlow"
@@ -43,7 +43,7 @@ export default function Navbar() {
           ))}
 
           <Link
-            href={`/${otherLocale}`}
+            href={`/${otherLocale}/{home}`}
             className="text-sm text-text-muted hover:text-text transition-colors uppercase"
           >
             {otherLocale}
@@ -78,7 +78,7 @@ export default function Navbar() {
             </a>
           ))}
           <Link
-            href={`/${otherLocale}`}
+            href={`/${otherLocale}/{home}`}
             onClick={() => setOpen(false)}
             className="text-sm text-text-muted uppercase"
           >

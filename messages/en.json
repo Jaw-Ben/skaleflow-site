@@ -15,6 +15,91 @@
     "comingSoon": "Coming soon",
     "back": "← Back"
   },
+  "devpage": {
+    "hero": {
+      "badge": "Web Development",
+      "titleBefore": "A professional website to",
+      "titleHighlight": "attract more clients",
+      "description": "Tailor-made websites for new businesses: clear, fast and built to be found on Google.",
+      "ctaPrimary": "Book a call",
+      "ctaSecondary": "See our offers"
+    },
+    "about": {
+      "badge": "Why us",
+      "title": "Your website, hassle-free",
+      "introBefore": "A website that builds trust and",
+      "introHighlight": "turns visitors into clients",
+      "paragraph1": "When you launch your business, you don't have time to manage a web project. We handle everything: design, launch, domain name and hosting.",
+      "paragraph2": "You get a single point of contact, transparent pricing and a website that can grow with your business."
+    },
+    "services": {
+      "badge": "Our offers",
+      "title": "Two simple, clear offers",
+      "recommendedBadge": "Recommended",
+      "offers": [
+        {
+          "tier": "Creation",
+          "title": "Showcase website",
+          "price": "Custom quote",
+          "description": "A tailor-made professional website that presents your business and makes it easy to get in touch.",
+          "features": [
+            "Custom design, mobile-friendly",
+            "Essential pages: home, services, contact",
+            "Call button and contact form",
+            "Domain name and launch"
+          ],
+          "cta": "Request a quote"
+        },
+        {
+          "tier": "Follow-up",
+          "title": "Maintenance & local SEO",
+          "price": "Custom quote",
+          "description": "We keep your website up to date and work on your local visibility so customers can find you.",
+          "features": [
+            "Regular updates and backups",
+            "Content changes and fixes",
+            "Google Business profile optimisation",
+            "Local SEO",
+            "Transparent pricing, no surprises"
+          ],
+          "cta": "Request a quote"
+        }
+      ]
+    },
+    "methode": {
+      "badge": "Process",
+      "title": "From the first call to delivery",
+      "prevLabel": "Previous step",
+      "nextLabel": "Next step",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Discovery call",
+          "description": "We talk over the phone to understand your business, your customers and what you expect from your website."
+        },
+        {
+          "number": "02",
+          "title": "Presentation on Zoom",
+          "description": "On Zoom, we present the website proposal and fine-tune the key points together."
+        },
+        {
+          "number": "03",
+          "title": "Approval and payment",
+          "description": "Once the proposal is approved, you pay simply and we start building."
+        },
+        {
+          "number": "04",
+          "title": "Delivery and follow-up",
+          "description": "We put your website online, walk you through the essentials and stay available for what comes next."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to launch your website?",
+      "description": "Book a free call: we'll review your project and answer with no commitment.",
+      "button": "Book a call"
+    }
+  },
   "hero": {
     "badge": "Growth Partner Agency",
     "titleBefore": "We scale your DTC brand with",
